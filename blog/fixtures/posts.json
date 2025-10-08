@@ -1,0 +1,72 @@
+[
+  {
+    "model": "blog.post",
+    "pk": null,
+    "fields": {
+      "title": "Power Waves & Rivalries: A Fresh Look at Fatal Fury in 2025",
+      "slug": "power-waves-and-rivalries-a-fresh-look-at-fatal-fury-in-2025",
+      "author": 1,
+      "content": "<p><b>Introduction: South Town Never Sleeps</b></p><p>Few series capture classic 90s fighting game energy like <i>Fatal Fury</i>. In 2025, returning to South Town means revisiting foundational mechanics—simple inputs with surprising depth—and a cast whose rivalries still spark.</p><p><b>Lines of Play: Two-Plane DNA</b></p><p>The signature two-plane movement (foreground/background hops) adds spacing layers you won’t find elsewhere. Modern re-releases map these ideas to cleaner inputs, keeping the footsies-first feel intact.</p><p><b>Iconic Archetypes</b></p><p>Terry’s all-rounder pressure, Mai’s mobility, Joe’s zoning—each teaches fundamentals that translate to today’s fighters. New players learn corner carry, meaty timing, and whiff-punish discipline quickly.</p><p><b>Why It Matters Now</b></p><p>With rollback netcode patches and curated collections, <i>Fatal Fury</i> is a living lesson in spacing and momentum. It’s nostalgia—and a training ground—for modern competitors.</p><p><b>Conclusion</b></p><p>If you want clean reads and clutch punishes without system bloat, South Town’s streets are still the best classroom.</p>",
+      "created_on": "2025-10-08T12:00:00Z",
+      "status": 1,
+      "excerpt": "South Town’s timeless rivalries return. See how Fatal Fury’s two-plane footsies still sharpen fundamentals in 2025.",
+      "updated_on": "2025-10-08T12:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": null,
+    "fields": {
+      "title": "King of the Iron Fist: Why Tekken Still Rules the Arena",
+      "slug": "king-of-the-iron-fist-why-tekken-still-rules-the-arena",
+      "author": 1,
+      "content": "<p><b>Introduction: 3D Pressure, Real Stakes</b></p><p><i>Tekken</i> blends movement mastery with bone-crunching execution. Sidesteps, backdashes, and wave-dashes turn the stage into a dance floor where one wrong beat costs the round.</p><p><b>Neutral & Movement</b></p><p>Backdash-cancel spacing, sidewalking, and whiff punishment define high-level play. Learning to create and steal frames is the heart of Tekken’s mind games.</p><p><b>Character Depth</b></p><p>From Mishima electrics to King’s throw chains, each roster pick offers a lab monster’s paradise—plus generous practice tools and punishment guides for newcomers.</p><p><b>Online & Scene</b></p><p>Rollback improvements and robust tournaments mean better sets, faster. Seasonal balance keeps mains fresh without erasing identity.</p><p><b>Conclusion</b></p><p>If you love reads, movement, and momentum, the Iron Fist tournament remains the genre’s most addictive pressure cooker.</p>",
+      "created_on": "2025-10-08T12:01:00Z",
+      "status": 1,
+      "excerpt": "Tekken’s movement, whiff punishment, and deep characters keep it the most compelling 3D arena in fighting games.",
+      "updated_on": "2025-10-08T12:01:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": null,
+    "fields": {
+      "title": "Hadouken to Drive Impact: Street Fighter’s Evolution Explained",
+      "slug": "hadouken-to-drive-impact-street-fighters-evolution-explained",
+      "author": 1,
+      "content": "<p><b>Introduction: The Language of Fighting Games</b></p><p><i>Street Fighter</i> defines fundamentals: anti-airs, fireball wars, and safe jumps. Recent entries add modern tools without losing the chess match fans love.</p><p><b>System Mechanics</b></p><p>Universal resources like Drive/Focus meter create expressive offense and defense—parries, armored strikes, and cancels that reward smart risk.</p><p><b>Learning Path</b></p><p>Classic shotos teach spacing and confirms, while specialists (grapplers, charge, rushdown) broaden matchup literacy. Trials and replay tools shorten the climb.</p><p><b>Community & Competition</b></p><p>Weekly locals, online ladders, and global majors make SF the easiest scene to enter and the hardest to master.</p><p><b>Conclusion</b></p><p>Whether you’re tossing fireballs or perfecting hit-confirms, Street Fighter remains the clearest doorway into competitive fighting games.</p>",
+      "created_on": "2025-10-08T12:02:00Z",
+      "status": 1,
+      "excerpt": "Street Fighter modernizes core fundamentals with flexible systems—perfect for newcomers and lab monsters alike.",
+      "updated_on": "2025-10-08T12:02:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": null,
+    "fields": {
+      "title": "Virtua Fighter’s Pure 3D Chess: Fundamentals Over Frills",
+      "slug": "virtua-fighters-pure-3d-chess-fundamentals-over-frills",
+      "author": 1,
+      "content": "<p><b>Introduction: The Cleanest Fight in Town</b></p><p><i>Virtua Fighter</i> strips away gimmicks and spotlights yomi: throw/strike/guard. It’s precise, fast, and merciless about spacing and timing.</p><p><b>Core Triangle</b></p><p>Beating throws with strikes, strikes with guard, and guard with throws forms a transparent mind game that rewards reads over rote set-play.</p><p><b>Movement & Ring Outs</b></p><p>Side-turns, fuzzy guard, and ring positioning make every step meaningful. The stage edge is both weapon and threat.</p><p><b>Why Play VF Today</b></p><p>Its purity sharpens decision-making that transfers to every other fighter—making VF the dojo for fundamentals.</p><p><b>Conclusion</b></p><p>If you crave clarity, speed, and skill expression, few titles teach spacing and defense like Virtua Fighter.</p>",
+      "created_on": "2025-10-08T12:03:00Z",
+      "status": 1,
+      "excerpt": "Virtua Fighter is pure yomi and movement—no fluff, just razor-sharp fundamentals and ring-out drama.",
+      "updated_on": "2025-10-08T12:03:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": null,
+    "fields": {
+      "title": "Rings, Speed, and Worlds Collide: Sonic Crossworlds Preview",
+      "slug": "rings-speed-and-worlds-collide-sonic-crossworlds-preview",
+      "author": 1,
+      "content": "<p><b>Introduction: Blue Blur, New Horizons</b></p><p><i>Sonic Crossworlds</i> blends high-velocity platforming with multi-zone exploration. Momentum returns to center stage—master routes, chain boosts, and surf set-pieces at breakneck pace.</p><p><b>Level Design</b></p><p>Branching paths reward curiosity: speed lines for veterans, readable lanes for newcomers. Environmental gimmicks add flair without killing flow.</p><p><b>Abilities & Progression</b></p><p>Modular upgrades enhance traversal and combat—think air-dashes, ring magnets, and time-trial perks that invite leaderboard obsession.</p><p><b>Sound & Style</b></p><p>Punchy synths and colorful vistas channel classic energy, while modern lighting and crisp UI keep everything slick.</p><p><b>Conclusion</b></p><p>If momentum-driven platformers are your thing, Crossworlds looks like the fastest way to scratch that speedrunner itch.</p>",
+      "created_on": "2025-10-08T12:04:00Z",
+      "status": 1,
+      "excerpt": "A speedy sneak peek at Sonic Crossworlds—branching routes, momentum-first design, and style to spare.",
+      "updated_on": "2025-10-08T12:04:00Z"
+    }
+  }
+]
