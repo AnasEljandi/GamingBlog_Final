@@ -29,7 +29,6 @@
   }
   .content-area p { color: #e5e7eb; line-height: 1.8; }
 
-  /* Headings inside content */
   .content-area h1,
   .content-area h2,
   .content-area h3,
@@ -40,7 +39,6 @@
     font-family: 'Mangold', sans-serif;
   }
 
-  /* Orange intro paragraph headings */
   .content-area p > strong:first-child,
   .content-area p > b:first-child {
     display: block;
@@ -125,6 +123,14 @@
     color: #0b0f1a;
     box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
   }
+
+  /* Edit/Delete Buttons */
+  .btn-outline-info, .btn-outline-danger {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    margin-right: 0.3rem;
+  }
 </style>
 
 <div class="container py-4">
@@ -194,8 +200,17 @@
                 <div id="comment{{ comment.id }}">
                   {{ comment.body|linebreaks }}
                 </div>
+
                 {% if not comment.approved and comment.author == user %}
                 <p class="approval">This comment is awaiting approval</p>
+                {% endif %}
+
+                <!-- ✅ Edit/Delete Buttons Added -->
+                {% if comment.author == user %}
+                <div class="mt-2">
+                  <a href="{% url 'edit_comment' comment.pk %}" class="btn btn-sm btn-outline-info">Edit</a>
+                  <a href="{% url 'delete_comment' comment.pk %}" class="btn btn-sm btn-outline-danger">Delete</a>
+                </div>
                 {% endif %}
               </div>
               {% empty %}
@@ -227,5 +242,5 @@
     </div>
   </div>
 </div>
-{% endblock %}
 
+{% endblock %}
