@@ -1,9 +1,14 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 {% block content %}
 <div class="container mt-5 text-light">
-  <h2>{{ fav_page.title }}</h2>
-  <div>{{ fav_page.content|safe }}</div>
-  <p class="text-end"><em>Updated on: {{ fav_page.updated_on }}</em></p>
+  {% if fav_page %}
+    <h2>{{ fav_page.title }}</h2>
+    <div>{{ fav_page.content|safe }}</div>
+    <p class="text-end"><em>Updated on: {{ fav_page.updated_on }}</em></p>
+  {% else %}
+    <h2>Favourite Post</h2>
+    <p>No content yet. Add a <strong>FavouritePostPage</strong> in the admin.</p>
+  {% endif %}
 </div>
 {% endblock %}
