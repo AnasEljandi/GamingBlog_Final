@@ -1,5 +1,6 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'favourite_post' as favourite_post_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -29,72 +30,45 @@
   />
 
   <style>
-    /* =================== Global Styles =================== */
-    body{
+    body {
       background-color:#0b0b0f;
       color:#e2e8f0;
       font-family:'Roboto',sans-serif;
     }
-    .navbar{
+    .navbar {
       background:linear-gradient(90deg,#111827,#1e1b4b,#0f172a);
       box-shadow:0 0 20px rgba(59,130,246,.4);
     }
-
-    /* =================== Brand / Logo =================== */
-    .navbar-brand{
+    .navbar-brand {
       display:flex;align-items:center;
       font-family:'Mangold',sans-serif;font-weight:700;font-size:1.7rem;
       letter-spacing:2px;color:#00e5ff!important;text-transform:uppercase;
       text-shadow:0 0 12px #00e5ff,0 0 25px #3b82f6;transition:.3s;
     }
-    .navbar-brand:hover{color:#00e5ff!important;text-shadow:0 0 25px #00e5ff,0 0 45px #3b82f6;}
-
-    /* =================== Navigation =================== */
-    .navbar .nav-link{color:#cbd5e1!important;font-weight:500;letter-spacing:.5px;transition:.3s;}
-    .navbar .nav-link.active,.navbar .nav-link:hover{color:#ff8c00!important;text-shadow:0 0 10px #ff8c00,0 0 20px #ffa733;}
-    .navbar-text{color:#94a3b8!important;font-style:italic;}
-
-    /* =================== Main Section =================== */
-    .main-bg{background:radial-gradient(circle at top,#111827,#0b0b0f 70%);min-height:80vh;}
-
-    /* =================== Footer =================== */
-    footer{background:linear-gradient(90deg,#111827,#1e1b4b);box-shadow:0 -2px 10px rgba(59,130,246,.3);}
-    footer p{margin:0;color:#e2e8f0;font-size:.95rem;}
-    footer i{color:#00e5ff;transition:.3s;}
-    footer i:hover{transform:scale(1.3);color:#ff8c00;}
-
-    /* =================== Animation =================== */
-    @keyframes glowPulse{
-      0%{text-shadow:0 0 12px #00e5ff,0 0 22px #3b82f6;}
-      50%{text-shadow:0 0 16px #8b5cf6,0 0 40px #00e5ff;}
-      100%{text-shadow:0 0 12px #00e5ff,0 0 22px #3b82f6;}
+    .navbar-brand:hover {
+      color:#00e5ff!important;
+      text-shadow:0 0 25px #00e5ff,0 0 45px #3b82f6;
     }
-    .navbar-brand span{animation:glowPulse 2.5s ease-in-out infinite alternate;}
-
-    /* =================== Neon Author Glow =================== */
-    .image-flash .author,.card .author,.author{
-      font-family:'Mangold',sans-serif;font-size:.95rem;font-weight:700;text-transform:uppercase;
-      letter-spacing:.6px;color:#00e5ff!important;
-      text-shadow:0 0 6px rgba(0,229,255,.85),0 0 14px rgba(0,229,255,.65),0 0 28px rgba(59,130,246,.55),0 0 42px rgba(0,229,255,.45);
-      animation:authorPulse 2.4s ease-in-out infinite alternate;margin-bottom:.5rem;
+    .navbar .nav-link {
+      color:#cbd5e1!important;font-weight:500;letter-spacing:.5px;transition:.3s;
     }
-    @keyframes authorPulse{
-      0%{text-shadow:0 0 6px rgba(0,229,255,.85),0 0 16px rgba(59,130,246,.55);}
-      50%{text-shadow:0 0 10px rgba(139,92,246,.8),0 0 28px rgba(0,229,255,.65);}
-      100%{text-shadow:0 0 6px rgba(0,229,255,.85),0 0 16px rgba(59,130,246,.55);}
+    .navbar .nav-link.active,.navbar .nav-link:hover {
+      color:#ff8c00!important;text-shadow:0 0 10px #ff8c00,0 0 20px #ffa733;
     }
-
-    /* =================== Card Styling =================== */
-    .card{
-      background:#0f172a!important;border:1px solid rgba(0,229,255,.08)!important;
-      box-shadow:0 8px 24px rgba(0,0,0,.45);border-radius:12px;transition:.3s;
+    .navbar-text {color:#94a3b8!important;font-style:italic;}
+    .main-bg {
+      background:radial-gradient(circle at top,#111827,#0b0b0f 70%);
+      min-height:80vh;
     }
-    .card:hover{transform:translateY(-4px);box-shadow:0 0 25px rgba(0,229,255,.3);}
-    .card-title{
-      font-family:'Mangold',sans-serif;font-weight:700;color:#00e5ff;
-      text-shadow:0 0 8px rgba(0,229,255,.7),0 0 18px rgba(0,229,255,.4);transition:.3s;
+    footer {
+      background:linear-gradient(90deg,#111827,#1e1b4b);
+      box-shadow:0 -2px 10px rgba(59,130,246,.3);
     }
-    .card-title:hover{color:#ffa733;text-shadow:0 0 12px #ffa733,0 0 24px #ff8c00;}
+    footer p {
+      margin:0;color:#e2e8f0;font-size:.95rem;
+    }
+    footer i {color:#00e5ff;transition:.3s;}
+    footer i:hover {transform:scale(1.3);color:#ff8c00;}
   </style>
 </head>
 
@@ -119,16 +93,30 @@
             <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">About</a>
           </li>
 
+          <!-- 🟢 Favourite Post Page Link -->
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == favourite_post_url %}active{% endif %}"
+               href="{% url 'favourite_post' %}">
+              Favourite Post
+            </a>
+          </li>
+
           {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">
+                Logout
+              </a>
             </li>
           {% else %}
             <li class="nav-item">
-              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">
+                Register
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
+              <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">
+                Login
+              </a>
             </li>
           {% endif %}
         </ul>
@@ -138,15 +126,15 @@
     </div>
   </nav>
 
-  <!-- 🔔 Toast messages (top-right) -->
+  <!-- Toast Messages (top right corner) -->
   {% if messages %}
   <style>
-    .toast-stack{
-      position:fixed; top:80px; right:16px;  /* move down a bit to clear navbar */
+    .toast-stack {
+      position:fixed; top:80px; right:16px;
       display:flex; flex-direction:column; gap:10px;
       width:min(320px,92vw); z-index:9999; pointer-events:none;
     }
-    .toast-msg{
+    .toast-msg {
       pointer-events:auto; background:rgba(11,15,26,.95);
       border:1px solid rgba(0,229,255,.18);
       border-radius:14px;
@@ -154,42 +142,29 @@
       color:#cdd7f6; padding:12px 14px; backdrop-filter:blur(6px);
       transform:translateY(-8px); opacity:0; animation:toast-in .22s ease-out forwards;
     }
-    @keyframes toast-in{to{transform:translateY(0);opacity:1}}
-    .toast-content{display:flex;align-items:center;gap:10px}
-    .toast-icon{font-size:18px;line-height:1}
-    .toast-text{flex:1;font-size:.95rem}
-    .toast-close{background:transparent;border:0;color:#9fdfff;font-size:18px;line-height:1;padding:0 4px;cursor:pointer;border-radius:8px}
-    .toast-close:hover{background:rgba(159,223,255,.12)}
-    .toast-success{border-color:rgba(0,255,170,.35);box-shadow:0 0 24px rgba(0,255,170,.08) inset}
-    .toast-warning{border-color:rgba(240,193,59,.4); box-shadow:0 0 24px rgba(240,193,59,.08) inset}
-    .toast-error  {border-color:rgba(255,87,87,.45);  box-shadow:0 0 24px rgba(255,87,87,.10) inset}
-    .toast-info   {border-color:rgba(0,229,255,.35)}
+    @keyframes toast-in {to{transform:translateY(0);opacity:1}}
+    .toast-content {display:flex;align-items:center;gap:10px}
+    .toast-close {background:transparent;border:0;color:#9fdfff;font-size:18px;cursor:pointer;}
   </style>
 
   <div class="toast-stack" aria-live="polite" aria-atomic="true">
     {% for message in messages %}
       <div class="toast-msg toast-{{ message.tags|default:'info' }}">
         <div class="toast-content">
-          <span class="toast-icon">
-            {% if 'success' in message.tags %}✅{% elif 'warning' in message.tags %}⚠️{% elif 'error' in message.tags %}⛔{% else %}ℹ️{% endif %}
-          </span>
-          <div class="toast-text">{{ message|safe }}</div>
-          <button class="toast-close" type="button" aria-label="Close" data-toast-close>&times;</button>
+          <span>{% if 'success' in message.tags %}✅{% elif 'warning' in message.tags %}⚠️{% elif 'error' in message.tags %}⛔{% else %}ℹ️{% endif %}</span>
+          <div>{{ message|safe }}</div>
+          <button class="toast-close" type="button" data-toast-close>&times;</button>
         </div>
       </div>
     {% endfor %}
   </div>
-
   <script>
     document.querySelectorAll('.toast-msg').forEach(function(toast){
       const timer=setTimeout(()=>dismiss(toast),4000);
       toast.querySelector('[data-toast-close]')?.addEventListener('click',()=>{clearTimeout(timer);dismiss(toast);});
     });
-    function dismiss(el){
-      el.style.transition='transform .18s ease, opacity .18s ease';
-      el.style.transform='translateX(20px)'; el.style.opacity='0';
-      setTimeout(()=>el.remove(),180);
-    }
+    function dismiss(el){el.style.transition='transform .18s ease,opacity .18s ease';
+      el.style.transform='translateX(20px)';el.style.opacity='0';setTimeout(()=>el.remove(),180);}
   </script>
   {% endif %}
 
@@ -200,7 +175,6 @@
     {% else %}
       <p class="text-end m-3">You are not logged in</p>
     {% endif %}
-
     {% block content %}{% endblock content %}
   </main>
 
@@ -217,10 +191,6 @@
   ></script>
 
   <script src="{% static 'js/script.js' %}"></script>
-
-  
-    {% block extras %}
-    {% endblock %}
-
+  {% block extras %}{% endblock %}
 </body>
 </html>
