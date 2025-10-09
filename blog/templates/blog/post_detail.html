@@ -40,7 +40,7 @@
     font-family: 'Mangold', sans-serif;
   }
 
-  /* 🔥 Orange intro paragraph headings */
+  /* Orange intro paragraph headings */
   .content-area p > strong:first-child,
   .content-area p > b:first-child {
     display: block;
@@ -58,30 +58,72 @@
     border-radius: 8px; padding: .25rem .5rem;
   }
 
-  /* 🧩 Comment section styling */
+  /* Comments + Form Section */
   .comment-section {
     background: #0b0f1a;
     border: 1px solid rgba(0,229,255,.08);
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,.4);
-    padding: 1.5rem;
+    padding: 2rem;
     margin-top: 2rem;
   }
   .comment-section h3 {
     color: #00e5ff;
     text-shadow: 0 0 8px #00e5ff;
     font-family: 'Mangold', sans-serif;
+    margin-bottom: 1rem;
   }
   .comment-box {
     background: #0f172a;
     border-radius: 10px;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 8px rgba(0,229,255,.05);
   }
   .comment-box p { color: #e5e7eb; }
   .approval {
     color: #ffae42;
     font-size: 0.9rem;
+  }
+
+  /* Comment Form */
+  .comment-form {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0,229,255,.15);
+  }
+  .comment-form h3 {
+    color: #00e5ff;
+    text-shadow: 0 0 8px #00e5ff;
+    font-family: 'Mangold', sans-serif;
+    margin-bottom: .75rem;
+  }
+  .comment-form label {
+    color: #00e5ff;
+    font-weight: 500;
+  }
+  .comment-form textarea {
+    background: #0b0f1a;
+    border: 1px solid #00e5ff;
+    color: #fff;
+    width: 100%;
+    border-radius: 8px;
+    padding: .5rem;
+    resize: vertical;
+  }
+  .comment-form button {
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+    border-radius: 8px;
+    background: transparent;
+    text-shadow: 0 0 5px #00e5ff;
+    transition: all .3s ease;
+  }
+  .comment-form button:hover {
+    background: #00e5ff;
+    color: #0b0f1a;
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
   }
 </style>
 
@@ -96,6 +138,7 @@
     </ol>
   </nav>
 
+  <!-- Post Content -->
   <article class="post-card">
     {% if post.featured_image %}
       <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="img-fluid w-100">
@@ -129,32 +172,56 @@
     </div>
   </article>
 
-  <!-- 🧩 Comment Section -->
-  <div class="row justify-content-center">
+  <!-- Comments & Form Side by Side -->
+  <div class="row justify-content-center mt-5">
     <div class="col-lg-10">
       <div class="comment-section">
-        <h3>Comments{% if comments %} ({{ comments|length }}){% endif %}:</h3>
-        <div class="card-body px-2">
-          {% for comment in comments %}
-          <div class="comment-box
-            {% if not comment.approved and comment.author == user %}
-            faded{% elif not comment.approved %} d-none{% endif %}">
-            <p class="font-weight-bold">
-              {{ comment.author }}
-              <span class="font-weight-normal text-muted">
-                • {{ comment.created_on }}
-              </span>
-            </p>
-            <div id="comment{{ comment.id }}">
-              {{ comment.body|linebreaks }}
+        <div class="row g-4">
+          <!-- LEFT: Comments -->
+          <div class="col-md-6">
+            <h3>Comments{% if comments %} ({{ comments|length }}){% endif %}:</h3>
+            <div class="card-body px-2">
+              {% for comment in comments %}
+              <div class="comment-box
+                {% if not comment.approved and comment.author == user %}
+                faded{% elif not comment.approved %} d-none{% endif %}">
+                <p class="font-weight-bold">
+                  {{ comment.author }}
+                  <span class="font-weight-normal text-muted">
+                    • {{ comment.created_on }}
+                  </span>
+                </p>
+                <div id="comment{{ comment.id }}">
+                  {{ comment.body|linebreaks }}
+                </div>
+                {% if not comment.approved and comment.author == user %}
+                <p class="approval">This comment is awaiting approval</p>
+                {% endif %}
+              </div>
+              {% empty %}
+              <p class="text-muted mt-3">No comments yet. Be the first to share your thoughts!</p>
+              {% endfor %}
             </div>
-            {% if not comment.approved and comment.author == user %}
-            <p class="approval">This comment is awaiting approval</p>
+          </div>
+
+          <!-- RIGHT: Comment Form -->
+          <div class="col-md-6">
+            {% if user.is_authenticated %}
+            <div class="comment-form">
+              <h3>Leave a comment:</h3>
+              <p class="text-light mb-2">Posting as: <strong>{{ user.username }}</strong></p>
+              <form method="POST">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <button type="submit" class="mt-2">Submit</button>
+              </form>
+            </div>
+            {% else %}
+            <p class="text-muted mt-3">
+              <a href="{% url 'account_login' %}" class="text-info">Sign in</a> to leave a comment.
+            </p>
             {% endif %}
           </div>
-          {% empty %}
-          <p class="text-muted mt-3">No comments yet. Be the first to share your thoughts!</p>
-          {% endfor %}
         </div>
       </div>
     </div>

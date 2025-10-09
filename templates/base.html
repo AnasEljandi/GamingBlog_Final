@@ -7,260 +7,215 @@
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
-
 <head>
-    <title>GameGrid | Gaming Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameGrid | Gaming Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 
-    <!-- Mangold Gaming Font -->
-    <link href="https://fonts.cdnfonts.com/css/mangold" rel="stylesheet">
+  <!-- Mangold Gaming Font -->
+  <link href="https://fonts.cdnfonts.com/css/mangold" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+    crossorigin="anonymous"
+  />
 
-    <style>
-        /* =================== Global Styles =================== */
-        body {
-            background-color: #0b0b0f;
-            color: #e2e8f0;
-            font-family: 'Roboto', sans-serif;
-        }
+  <style>
+    /* =================== Global Styles =================== */
+    body{
+      background-color:#0b0b0f;
+      color:#e2e8f0;
+      font-family:'Roboto',sans-serif;
+    }
+    .navbar{
+      background:linear-gradient(90deg,#111827,#1e1b4b,#0f172a);
+      box-shadow:0 0 20px rgba(59,130,246,.4);
+    }
 
-        .navbar {
-            background: linear-gradient(90deg, #111827, #1e1b4b, #0f172a);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-        }
+    /* =================== Brand / Logo =================== */
+    .navbar-brand{
+      display:flex;align-items:center;
+      font-family:'Mangold',sans-serif;font-weight:700;font-size:1.7rem;
+      letter-spacing:2px;color:#00e5ff!important;text-transform:uppercase;
+      text-shadow:0 0 12px #00e5ff,0 0 25px #3b82f6;transition:.3s;
+    }
+    .navbar-brand:hover{color:#00e5ff!important;text-shadow:0 0 25px #00e5ff,0 0 45px #3b82f6;}
 
-        /* =================== Brand / Logo =================== */
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            font-family: 'Mangold', sans-serif;
-            font-weight: 700;
-            font-size: 1.7rem;
-            letter-spacing: 2px;
-            color: #00e5ff !important;
-            text-transform: uppercase;
-            text-shadow: 0 0 12px #00e5ff, 0 0 25px #3b82f6;
-            transition: all 0.3s ease;
-        }
+    /* =================== Navigation =================== */
+    .navbar .nav-link{color:#cbd5e1!important;font-weight:500;letter-spacing:.5px;transition:.3s;}
+    .navbar .nav-link.active,.navbar .nav-link:hover{color:#ff8c00!important;text-shadow:0 0 10px #ff8c00,0 0 20px #ffa733;}
+    .navbar-text{color:#94a3b8!important;font-style:italic;}
 
-        .navbar-brand:hover {
-            color: #00e5ff !important;
-            text-shadow: 0 0 25px #00e5ff, 0 0 45px #3b82f6;
-        }
+    /* =================== Main Section =================== */
+    .main-bg{background:radial-gradient(circle at top,#111827,#0b0b0f 70%);min-height:80vh;}
 
-        /* =================== Navigation =================== */
-        .navbar .nav-link {
-            color: #cbd5e1 !important;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-        }
+    /* =================== Footer =================== */
+    footer{background:linear-gradient(90deg,#111827,#1e1b4b);box-shadow:0 -2px 10px rgba(59,130,246,.3);}
+    footer p{margin:0;color:#e2e8f0;font-size:.95rem;}
+    footer i{color:#00e5ff;transition:.3s;}
+    footer i:hover{transform:scale(1.3);color:#ff8c00;}
 
-        .navbar .nav-link.active,
-        .navbar .nav-link:hover {
-            color: #ff8c00 !important;
-            text-shadow: 0 0 10px #ff8c00, 0 0 20px #ffa733;
-        }
+    /* =================== Animation =================== */
+    @keyframes glowPulse{
+      0%{text-shadow:0 0 12px #00e5ff,0 0 22px #3b82f6;}
+      50%{text-shadow:0 0 16px #8b5cf6,0 0 40px #00e5ff;}
+      100%{text-shadow:0 0 12px #00e5ff,0 0 22px #3b82f6;}
+    }
+    .navbar-brand span{animation:glowPulse 2.5s ease-in-out infinite alternate;}
 
-        .navbar-text {
-            color: #94a3b8 !important;
-            font-style: italic;
-        }
+    /* =================== Neon Author Glow =================== */
+    .image-flash .author,.card .author,.author{
+      font-family:'Mangold',sans-serif;font-size:.95rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.6px;color:#00e5ff!important;
+      text-shadow:0 0 6px rgba(0,229,255,.85),0 0 14px rgba(0,229,255,.65),0 0 28px rgba(59,130,246,.55),0 0 42px rgba(0,229,255,.45);
+      animation:authorPulse 2.4s ease-in-out infinite alternate;margin-bottom:.5rem;
+    }
+    @keyframes authorPulse{
+      0%{text-shadow:0 0 6px rgba(0,229,255,.85),0 0 16px rgba(59,130,246,.55);}
+      50%{text-shadow:0 0 10px rgba(139,92,246,.8),0 0 28px rgba(0,229,255,.65);}
+      100%{text-shadow:0 0 6px rgba(0,229,255,.85),0 0 16px rgba(59,130,246,.55);}
+    }
 
-        /* =================== Main Section =================== */
-        .main-bg {
-            background: radial-gradient(circle at top, #111827, #0b0b0f 70%);
-            min-height: 80vh;
-        }
-
-        /* =================== Footer =================== */
-        footer {
-            background: linear-gradient(90deg, #111827, #1e1b4b);
-            box-shadow: 0 -2px 10px rgba(59, 130, 246, 0.3);
-        }
-
-        footer p {
-            margin: 0;
-            color: #e2e8f0;
-            font-size: 0.95rem;
-        }
-
-        footer i {
-            color: #00e5ff;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        footer i:hover {
-            transform: scale(1.3);
-            color: #ff8c00;
-        }
-
-        /* =================== Animation =================== */
-        @keyframes glowPulse {
-            0% {
-                text-shadow: 0 0 12px #00e5ff, 0 0 22px #3b82f6;
-            }
-
-            50% {
-                text-shadow: 0 0 16px #8b5cf6, 0 0 40px #00e5ff;
-            }
-
-            100% {
-                text-shadow: 0 0 12px #00e5ff, 0 0 22px #3b82f6;
-            }
-        }
-
-        .navbar-brand span {
-            animation: glowPulse 2.5s ease-in-out infinite alternate;
-        }
-
-        /* =================== Neon Author Glow =================== */
-        .image-flash .author,
-        .card .author,
-        .author {
-            font-family: 'Mangold', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: .6px;
-            color: #00e5ff !important;
-            text-shadow:
-                0 0 6px rgba(0, 229, 255, .85),
-                0 0 14px rgba(0, 229, 255, .65),
-                0 0 28px rgba(59, 130, 246, .55),
-                0 0 42px rgba(0, 229, 255, .45);
-            opacity: 1 !important;
-            mix-blend-mode: normal;
-            animation: authorPulse 2.4s ease-in-out infinite alternate;
-            margin-bottom: .5rem;
-        }
-
-        @keyframes authorPulse {
-            0% {
-                text-shadow: 0 0 6px rgba(0, 229, 255, .85), 0 0 16px rgba(59, 130, 246, .55);
-            }
-
-            50% {
-                text-shadow: 0 0 10px rgba(139, 92, 246, .8), 0 0 28px rgba(0, 229, 255, .65);
-            }
-
-            100% {
-                text-shadow: 0 0 6px rgba(0, 229, 255, .85), 0 0 16px rgba(59, 130, 246, .55);
-            }
-        }
-
-        /* =================== Card Styling =================== */
-        .card {
-            background: #0f172a !important;
-            border: 1px solid rgba(0, 229, 255, .08) !important;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 0 25px rgba(0, 229, 255, .3);
-        }
-
-        .card-title {
-            font-family: 'Mangold', sans-serif;
-            font-weight: 700;
-            color: #00e5ff;
-            text-shadow: 0 0 8px rgba(0, 229, 255, .7), 0 0 18px rgba(0, 229, 255, .4);
-            transition: all 0.3s ease;
-        }
-
-        .card-title:hover {
-            color: #ffa733;
-            text-shadow: 0 0 12px #ffa733, 0 0 24px #ff8c00;
-        }
-    </style>
+    /* =================== Card Styling =================== */
+    .card{
+      background:#0f172a!important;border:1px solid rgba(0,229,255,.08)!important;
+      box-shadow:0 8px 24px rgba(0,0,0,.45);border-radius:12px;transition:.3s;
+    }
+    .card:hover{transform:translateY(-4px);box-shadow:0 0 25px rgba(0,229,255,.3);}
+    .card-title{
+      font-family:'Mangold',sans-serif;font-weight:700;color:#00e5ff;
+      text-shadow:0 0 8px rgba(0,229,255,.7),0 0 18px rgba(0,229,255,.4);transition:.3s;
+    }
+    .card-title:hover{color:#ffa733;text-shadow:0 0 12px #ffa733,0 0 24px #ff8c00;}
+  </style>
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <span>GameGrid</span>
-            </a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}"><span>GameGrid</span></a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">
-                            Home
-                        </a>
-                    </li>
-                     <li class="nav-item">
-              <a
-                class="nav-link
-                {% if request.path == about_url %}active{%endif%}"
-                aria-current="page"
-                href="{% url 'about' %}"
-                >About</a
-              >
-            </li>
-            {% if user.is_authenticated %}
-<li class="nav-item">
-	<a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-</li>
-{% else %}
-<li class="nav-item">
-	<a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-		href="{% url 'account_signup' %}">Register</a>
-</li>
-<li class="nav-item">
-	<a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-</li>
-{% endif %}
-                </ul>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">About</a>
+          </li>
 
-                <span class="navbar-text">
-                    Learn what gaming is through our blog!
-                </span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="flex-shrink-0 main-bg">
           {% if user.is_authenticated %}
-    <p class="text-end m-3">You are logged in as {{ user }}</p>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
+            </li>
+          {% endif %}
+        </ul>
+
+        <span class="navbar-text">Learn what gaming is through our blog!</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔔 Toast messages (top-right) -->
+  {% if messages %}
+  <style>
+    .toast-stack{
+      position:fixed; top:80px; right:16px;  /* move down a bit to clear navbar */
+      display:flex; flex-direction:column; gap:10px;
+      width:min(320px,92vw); z-index:9999; pointer-events:none;
+    }
+    .toast-msg{
+      pointer-events:auto; background:rgba(11,15,26,.95);
+      border:1px solid rgba(0,229,255,.18);
+      border-radius:14px;
+      box-shadow:0 10px 28px rgba(0,0,0,.45), 0 0 24px rgba(0,229,255,.08) inset;
+      color:#cdd7f6; padding:12px 14px; backdrop-filter:blur(6px);
+      transform:translateY(-8px); opacity:0; animation:toast-in .22s ease-out forwards;
+    }
+    @keyframes toast-in{to{transform:translateY(0);opacity:1}}
+    .toast-content{display:flex;align-items:center;gap:10px}
+    .toast-icon{font-size:18px;line-height:1}
+    .toast-text{flex:1;font-size:.95rem}
+    .toast-close{background:transparent;border:0;color:#9fdfff;font-size:18px;line-height:1;padding:0 4px;cursor:pointer;border-radius:8px}
+    .toast-close:hover{background:rgba(159,223,255,.12)}
+    .toast-success{border-color:rgba(0,255,170,.35);box-shadow:0 0 24px rgba(0,255,170,.08) inset}
+    .toast-warning{border-color:rgba(240,193,59,.4); box-shadow:0 0 24px rgba(240,193,59,.08) inset}
+    .toast-error  {border-color:rgba(255,87,87,.45);  box-shadow:0 0 24px rgba(255,87,87,.10) inset}
+    .toast-info   {border-color:rgba(0,229,255,.35)}
+  </style>
+
+  <div class="toast-stack" aria-live="polite" aria-atomic="true">
+    {% for message in messages %}
+      <div class="toast-msg toast-{{ message.tags|default:'info' }}">
+        <div class="toast-content">
+          <span class="toast-icon">
+            {% if 'success' in message.tags %}✅{% elif 'warning' in message.tags %}⚠️{% elif 'error' in message.tags %}⛔{% else %}ℹ️{% endif %}
+          </span>
+          <div class="toast-text">{{ message|safe }}</div>
+          <button class="toast-close" type="button" aria-label="Close" data-toast-close>&times;</button>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <script>
+    document.querySelectorAll('.toast-msg').forEach(function(toast){
+      const timer=setTimeout(()=>dismiss(toast),4000);
+      toast.querySelector('[data-toast-close]')?.addEventListener('click',()=>{clearTimeout(timer);dismiss(toast);});
+    });
+    function dismiss(el){
+      el.style.transition='transform .18s ease, opacity .18s ease';
+      el.style.transform='translateX(20px)'; el.style.opacity='0';
+      setTimeout(()=>el.remove(),180);
+    }
+  </script>
+  {% endif %}
+
+  <!-- Main Content -->
+  <main class="flex-shrink-0 main-bg">
+    {% if user.is_authenticated %}
+      <p class="text-end m-3">You are logged in as {{ user }}</p>
     {% else %}
-    <p class="text-end m-3">You are not logged in</p>
+      <p class="text-end m-3">You are not logged in</p>
     {% endif %}
-        {% block content %}
-        {% endblock content %}
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 text-center">
-        <p><strong>GameGrid</strong> — Where Knowledge Meets Gaming</p>
-    </footer>
+    {% block content %}{% endblock content %}
+  </main>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 text-center">
+    <p><strong>GameGrid</strong> — Where Knowledge Meets Gaming</p>
+  </footer>
 
-    <script src="{% static 'js/script.js' %}"></script>
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
-
 </html>
