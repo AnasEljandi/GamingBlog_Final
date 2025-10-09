@@ -1,5 +1,6 @@
 {% url 'home' as home_url %}
-{% load static %}  <!-- ✅ This line fixes the invalid_block_tag error -->
+{% url 'about' as about_url %}
+{% load static %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -118,6 +119,68 @@
         .navbar-brand span {
             animation: glowPulse 2.5s ease-in-out infinite alternate;
         }
+
+        /* =================== Neon Author Glow =================== */
+        .image-flash .author,
+        .card .author,
+        .author {
+            font-family: 'Mangold', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            color: #00e5ff !important;
+            text-shadow:
+                0 0 6px rgba(0, 229, 255, .85),
+                0 0 14px rgba(0, 229, 255, .65),
+                0 0 28px rgba(59, 130, 246, .55),
+                0 0 42px rgba(0, 229, 255, .45);
+            opacity: 1 !important;
+            mix-blend-mode: normal;
+            animation: authorPulse 2.4s ease-in-out infinite alternate;
+            margin-bottom: .5rem;
+        }
+
+        @keyframes authorPulse {
+            0% {
+                text-shadow: 0 0 6px rgba(0, 229, 255, .85), 0 0 16px rgba(59, 130, 246, .55);
+            }
+
+            50% {
+                text-shadow: 0 0 10px rgba(139, 92, 246, .8), 0 0 28px rgba(0, 229, 255, .65);
+            }
+
+            100% {
+                text-shadow: 0 0 6px rgba(0, 229, 255, .85), 0 0 16px rgba(59, 130, 246, .55);
+            }
+        }
+
+        /* =================== Card Styling =================== */
+        .card {
+            background: #0f172a !important;
+            border: 1px solid rgba(0, 229, 255, .08) !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 25px rgba(0, 229, 255, .3);
+        }
+
+        .card-title {
+            font-family: 'Mangold', sans-serif;
+            font-weight: 700;
+            color: #00e5ff;
+            text-shadow: 0 0 8px rgba(0, 229, 255, .7), 0 0 18px rgba(0, 229, 255, .4);
+            transition: all 0.3s ease;
+        }
+
+        .card-title:hover {
+            color: #ffa733;
+            text-shadow: 0 0 12px #ffa733, 0 0 24px #ff8c00;
+        }
     </style>
 </head>
 
@@ -126,7 +189,6 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
         <div class="container-fluid">
-            <!-- 🎮 Gaming Logo -->
             <a class="navbar-brand" href="{% url 'home' %}">
                 <span>GameGrid</span>
             </a>
@@ -143,6 +205,15 @@
                             Home
                         </a>
                     </li>
+                     <li class="nav-item">
+              <a
+                class="nav-link
+                {% if request.path == about_url %}active{%endif%}"
+                aria-current="page"
+                href="{% url 'about' %}"
+                >About</a
+              >
+            </li>
                 </ul>
 
                 <span class="navbar-text">
@@ -160,7 +231,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 text-center">
-        <p><strong>GameGrid</strong> — Where Knowledge Meets Gaming </p>
+        <p><strong>GameGrid</strong> — Where Knowledge Meets Gaming</p>
     </footer>
 
     <!-- Bootstrap JS -->
@@ -168,7 +239,6 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
 
-    <!-- Optional custom JS -->
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 

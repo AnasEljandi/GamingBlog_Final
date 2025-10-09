@@ -1,0 +1,40 @@
+/* ===================== Neon Author Glow ===================== */
+.author-glow {
+    font-family: 'Mangold', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00e5ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 5px rgba(0, 229, 255, 0.7),
+        0 0 10px rgba(0, 229, 255, 0.6),
+        0 0 20px rgba(59, 130, 246, 0.5),
+        0 0 40px rgba(0, 229, 255, 0.3);
+    animation: glowPulse 2.5s ease-in-out infinite alternate;
+    margin-bottom: 0.6rem;
+}
+
+/* ===== Smooth pulse animation for glowing effect ===== */
+@keyframes glowPulse {
+    0% {
+        text-shadow:
+            0 0 6px rgba(0, 229, 255, 0.7),
+            0 0 15px rgba(0, 229, 255, 0.6),
+            0 0 25px rgba(59, 130, 246, 0.5),
+            0 0 40px rgba(0, 229, 255, 0.3);
+    }
+    50% {
+        text-shadow:
+            0 0 8px rgba(139, 92, 246, 0.8),
+            0 0 20px rgba(0, 229, 255, 0.7),
+            0 0 40px rgba(59, 130, 246, 0.6),
+            0 0 70px rgba(0, 229, 255, 0.4);
+    }
+    100% {
+        text-shadow:
+            0 0 5px rgba(0, 229, 255, 0.6),
+            0 0 10px rgba(59, 130, 246, 0.5),
+            0 0 25px rgba(0, 229, 255, 0.4);
+    }
+}
