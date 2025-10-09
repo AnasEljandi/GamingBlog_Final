@@ -57,6 +57,32 @@
     background: #0f172a; color: #e5e7eb;
     border-radius: 8px; padding: .25rem .5rem;
   }
+
+  /* 🧩 Comment section styling */
+  .comment-section {
+    background: #0b0f1a;
+    border: 1px solid rgba(0,229,255,.08);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  .comment-section h3 {
+    color: #00e5ff;
+    text-shadow: 0 0 8px #00e5ff;
+    font-family: 'Mangold', sans-serif;
+  }
+  .comment-box {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .comment-box p { color: #e5e7eb; }
+  .approval {
+    color: #ffae42;
+    font-size: 0.9rem;
+  }
 </style>
 
 <div class="container py-4">
@@ -101,37 +127,38 @@
         </div>
       </div>
     </div>
+  </article>
 
-    <!-- Comments Section -->
-    <div class="row mt-5">
-      <div class="col-md-8 card mb-4 mt-3">
+  <!-- 🧩 Comment Section -->
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="comment-section">
         <h3>Comments{% if comments %} ({{ comments|length }}){% endif %}:</h3>
-        <div class="card-body">
+        <div class="card-body px-2">
           {% for comment in comments %}
-          <div class="p-2 comments
+          <div class="comment-box
             {% if not comment.approved and comment.author == user %}
             faded{% elif not comment.approved %} d-none{% endif %}">
             <p class="font-weight-bold">
               {{ comment.author }}
-              <span class="font-weight-normal">
-                {{ comment.created_on }}
-              </span> wrote:
+              <span class="font-weight-normal text-muted">
+                • {{ comment.created_on }}
+              </span>
             </p>
             <div id="comment{{ comment.id }}">
               {{ comment.body|linebreaks }}
             </div>
             {% if not comment.approved and comment.author == user %}
-            <p class="approval">
-              This comment is awaiting approval
-            </p>
+            <p class="approval">This comment is awaiting approval</p>
             {% endif %}
           </div>
           {% empty %}
-          <p class="text-muted">No comments yet. Be the first to share your thoughts!</p>
+          <p class="text-muted mt-3">No comments yet. Be the first to share your thoughts!</p>
           {% endfor %}
         </div>
       </div>
     </div>
-  </article>
+  </div>
 </div>
 {% endblock %}
+
