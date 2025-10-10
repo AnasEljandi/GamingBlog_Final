@@ -57,7 +57,7 @@ def post_detail(request, slug):
                     "comment_count": comment_count,
                     "comment_form": CommentForm(),  # reset form
                     "is_favourite": is_favourite,
-                },
+                }
             )
         # Invalid form — fall through to re-render with errors
     else:
