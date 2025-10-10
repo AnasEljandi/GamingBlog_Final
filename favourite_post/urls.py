@@ -1,4 +1,5 @@
 from django.urls import path
+from .views import favourite_post_page
 from . import views
 
 urlpatterns = [

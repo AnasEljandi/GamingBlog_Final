@@ -161,7 +161,24 @@
         {% endif %}
       </div>
 
-      <div class="content-area">
+      <!-- ✅ Favourite Button -->
+      {% if user.is_authenticated %}
+      <form method="post" action="{% url 'toggle_favourite' post.id %}" class="d-inline">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        {% if is_favourite %}
+          <button type="submit" class="btn btn-sm btn-outline-warning" style="border-radius:10px;">
+            <i class="fa-solid fa-heart"></i> Remove from Favourites
+          </button>
+        {% else %}
+          <button type="submit" class="btn btn-sm btn-outline-info" style="border-radius:10px;">
+            <i class="fa-regular fa-heart"></i> Add to Favourites
+          </button>
+        {% endif %}
+      </form>
+      {% endif %}
+
+      <div class="content-area mt-4">
         {{ post.content|safe }}
       </div>
 
@@ -205,7 +222,6 @@
                 <p class="approval">This comment is awaiting approval</p>
                 {% endif %}
 
-                <!-- ✅ Edit/Delete Buttons Added -->
                 {% if comment.author == user %}
                 <div class="mt-2">
                   <a href="{% url 'edit_comment' comment.pk %}" class="btn btn-sm btn-outline-info">Edit</a>

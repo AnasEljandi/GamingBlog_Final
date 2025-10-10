@@ -63,3 +63,4 @@ class FavouritePost(models.Model):
 
     def __str__(self):
         return f"{self.user.username} favourited {self.post.title}"
+

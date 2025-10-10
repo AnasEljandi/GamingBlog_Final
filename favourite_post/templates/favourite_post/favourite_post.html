@@ -1,14 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
-<div class="container mt-5 text-light">
-  {% if fav_page %}
-    <h2>{{ fav_page.title }}</h2>
-    <div>{{ fav_page.content|safe }}</div>
-    <p class="text-end"><em>Updated on: {{ fav_page.updated_on }}</em></p>
+<style>
+  .fav-title{ color:#00e5ff; text-shadow:0 0 10px #00e5ff; font-family:'Mangold',sans-serif; }
+  .post-card{ background:#0f172a; border:1px solid rgba(0,229,255,.08); border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.45); }
+  .post-card h5{ color:#00e5ff; text-shadow:0 0 8px rgba(0,229,255,.6); }
+  .meta{ font-size:.9rem; color:#94a3b8; }
+  .btn-fav{ border:1px solid rgba(0,229,255,.35); color:#00e5ff; border-radius:10px; background:transparent; }
+  .btn-fav:hover{ background:#00e5ff; color:#0b0f1a; box-shadow:0 0 15px #00e5ff; }
+</style>
+
+<div class="container py-4">
+  <h1 class="fav-title mb-4">My Favourite Posts</h1>
+
+  {% if posts %}
+    <div class="row g-4">
+      {% for post in posts %}
+      <div class="col-md-4">
+        <div class="post-card p-3 h-100 d-flex flex-column">
+          <a href="{% url 'post_detail' post.slug %}" class="text-decoration-none">
+            <h5 class="mb-2">{{ post.title }}</h5>
+          </a>
+          <p class="meta mb-3">By {{ post.author }} • {{ post.created_on|date:"M j, Y" }}</p>
+
+          <div class="mt-auto d-flex gap-2 align-items-center">
+            {% if user.is_authenticated %}
+            <form method="post" action="{% url 'toggle_favourite' post.id %}" class="d-inline">
+              {% csrf_token %}
+              <input type="hidden" name="next" value="{{ request.get_full_path }}">
+              <button type="submit" class="btn btn-sm btn-fav">
+                <i class="fa-solid fa-heart"></i> Remove
+              </button>
+            </form>
+            {% endif %}
+            <a href="{% url 'post_detail' post.slug %}" class="btn btn-sm btn-outline-info">View</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   {% else %}
-    <h2>Favourite Post</h2>
-    <p>No content yet. Add a <strong>FavouritePostPage</strong> in the admin.</p>
+    <p class="text-muted">You haven’t favourited any posts yet. Open a post and click “Add to Favourites”.</p>
   {% endif %}
 </div>
 {% endblock %}
