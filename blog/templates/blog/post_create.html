@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<style>
+  /* === Glowing Create Post Form === */
+  .create-post-container {
+    max-width: 700px;
+    margin: 80px auto;
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 16px;
+    padding: 40px 50px;
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.15),
+                inset 0 0 10px rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    backdrop-filter: blur(6px);
+  }
+
+  .create-post-container h2 {
+    font-family: 'Mangold', sans-serif;
+    font-size: 2rem;
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0,229,255,0.8),
+                 0 0 20px rgba(0,229,255,0.4);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  label {
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 1rem;
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #0b0b0f;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    color: #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0,229,255,0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #00e5ff;
+    box-shadow: 0 0 15px rgba(0,229,255,0.6);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 180px;
+  }
+
+  button {
+    background: linear-gradient(90deg, #00e5ff, #3b82f6);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    color: #0b0b0f;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 0 15px rgba(0,229,255,0.5);
+    transition: all 0.25s ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,229,255,0.8),
+                0 0 40px rgba(59,130,246,0.7);
+  }
+</style>
+
+<div class="create-post-container">
+  <h2>Create a New Post</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="id_title">Title:</label>
+      {{ form.title }}
+    </div>
+    <div class="mb-3">
+      <label for="id_content">Content:</label>
+      {{ form.content }}
+    </div>
+    <div class="text-center">
+      <button type="submit">Publish</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

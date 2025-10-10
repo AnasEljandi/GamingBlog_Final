@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load blog_extras %}
 
 {% block content %}
 <style>
@@ -156,9 +157,8 @@
       <div class="d-flex flex-wrap gap-2 mb-4">
         <span class="meta-chip">By {{ post.author }}</span>
         <span class="meta-chip">{{ post.created_on|date:"M j, Y, g:i a" }}</span>
-        {% if post.excerpt %}
-          <span class="meta-chip">Read time ~ 3–6 min</span>
-        {% endif %}
+       <span class="meta-chip">Read time ~ {{ post.content|read_time }} min</span>
+
       </div>
 
       <!-- ✅ Favourite Button -->
@@ -178,7 +178,8 @@
       </form>
       {% endif %}
 
-      <div class="content-area mt-4">
+      <!-- ✅ Step 2 applied: wrap content with .post-content -->
+      <div class="content-area post-content mt-4">
         {{ post.content|safe }}
       </div>
 

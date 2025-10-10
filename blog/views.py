@@ -4,6 +4,11 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import PostForm
+from django.utils.text import slugify
 
 from .models import Post, Comment, FavouritePost
 from .forms import CommentForm
@@ -164,3 +169,35 @@ def toggle_favourite(request, post_id):
         or reverse("home")
     )
     return redirect(next_url)
+
+@login_required
+def post_create(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            messages.success(request, "Post created!")
+            return redirect("home")  # change to a post detail URL if you have one
+    else:
+        form = PostForm()
+    return render(request, "blog/post_create.html", {"form": form})
+
+@login_required
+def post_create(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.status = 1             # ✅ publish it
+            if hasattr(post, "slug") and not post.slug:
+                post.slug = slugify(post.title)
+            post.save()
+            messages.success(request, "Post created and published!")
+            return redirect("home")
+    else:
+        form = PostForm()
+
+    return render(request, "blog/post_create.html", {"form": form})
