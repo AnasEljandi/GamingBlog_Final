@@ -15,7 +15,8 @@
                         <div class="card-body">
                             <div class="image-container">
                                 <div class="image-flash">
-                                    <p class="author-glow">Author: {{ post.author }}</p>
+                                    <!-- CHANGED: author-glow -> author -->
+                                    <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
