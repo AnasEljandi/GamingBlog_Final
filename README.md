@@ -8,10 +8,8 @@
 5. [Future Features](#future-features)  
 6. [Entity Relationship Diagram (ERD)](#entity-relationship-diagram)  
 7. [Testing](#testing)  
-8. [Bugs](#bugs)  
-9. [Deployment](#deployment)  
-10. [Technologies & Languages Used](#technologies--languages-used)       
-11. [Credits](#credits)
+8. [Bugs](#bugs)       
+9. [Credits](#credits)
 
 
 ## **Introduction**
