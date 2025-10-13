@@ -24,10 +24,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,.45);
     border-radius: 12px;
   }
-  .post-card img {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
+  .post-card img { border-top-left-radius: 12px; border-top-right-radius: 12px; }
   .content-area p { color: #e5e7eb; line-height: 1.8; }
 
   .content-area h1,
@@ -39,7 +36,6 @@
     text-shadow: 0 0 8px rgba(255,140,0,.55);
     font-family: 'Mangold', sans-serif;
   }
-
   .content-area p > strong:first-child,
   .content-area p > b:first-child {
     display: block;
@@ -50,7 +46,6 @@
     color: #ff8c00;
     text-shadow: 0 0 8px rgba(255,140,0,.55);
   }
-
   .content-area a { color: #00e5ff; text-decoration: underline; }
   .content-area pre, .content-area code {
     background: #0f172a; color: #e5e7eb;
@@ -63,74 +58,46 @@
     border: 1px solid rgba(0,229,255,.08);
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,.4);
-    padding: 2rem;
-    margin-top: 2rem;
+    padding: 2rem; margin-top: 2rem;
   }
   .comment-section h3 {
-    color: #00e5ff;
-    text-shadow: 0 0 8px #00e5ff;
-    font-family: 'Mangold', sans-serif;
-    margin-bottom: 1rem;
+    color: #00e5ff; text-shadow: 0 0 8px #00e5ff;
+    font-family: 'Mangold', sans-serif; margin-bottom: 1rem;
   }
   .comment-box {
-    background: #0f172a;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    background: #0f172a; border-radius: 10px;
+    padding: 1rem; margin-bottom: 1rem;
     box-shadow: 0 0 8px rgba(0,229,255,.05);
   }
   .comment-box p { color: #e5e7eb; }
-  .approval {
-    color: #ffae42;
-    font-size: 0.9rem;
-  }
+  .approval { color: #ffae42; font-size: 0.9rem; }
 
   /* Comment Form */
   .comment-form {
-    background: #0f172a;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 0 20px rgba(0,229,255,.15);
+    background: #0f172a; border-radius: 12px;
+    padding: 1.5rem; box-shadow: 0 0 20px rgba(0,229,255,.15);
   }
   .comment-form h3 {
-    color: #00e5ff;
-    text-shadow: 0 0 8px #00e5ff;
-    font-family: 'Mangold', sans-serif;
-    margin-bottom: .75rem;
+    color: #00e5ff; text-shadow: 0 0 8px #00e5ff;
+    font-family: 'Mangold', sans-serif; margin-bottom: .75rem;
   }
-  .comment-form label {
-    color: #00e5ff;
-    font-weight: 500;
-  }
+  .comment-form label { color: #00e5ff; font-weight: 500; }
   .comment-form textarea {
-    background: #0b0f1a;
-    border: 1px solid #00e5ff;
-    color: #fff;
-    width: 100%;
-    border-radius: 8px;
-    padding: .5rem;
-    resize: vertical;
+    background: #0b0f1a; border: 1px solid #00e5ff; color: #fff;
+    width: 100%; border-radius: 8px; padding: .5rem; resize: vertical;
   }
   .comment-form button {
-    border: 1px solid #00e5ff;
-    color: #00e5ff;
-    border-radius: 8px;
-    background: transparent;
-    text-shadow: 0 0 5px #00e5ff;
-    transition: all .3s ease;
+    border: 1px solid #00e5ff; color: #00e5ff; border-radius: 8px; background: transparent;
+    text-shadow: 0 0 5px #00e5ff; transition: all .3s ease;
   }
   .comment-form button:hover {
-    background: #00e5ff;
-    color: #0b0f1a;
+    background: #00e5ff; color: #0b0f1a;
     box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
   }
 
-  /* Edit/Delete Buttons */
+  /* Small buttons */
   .btn-outline-info, .btn-outline-danger {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
-    margin-right: 0.3rem;
+    font-size: 0.85rem; padding: 0.3rem 0.6rem; border-radius: 6px; margin-right: .3rem;
   }
 </style>
 
@@ -138,9 +105,7 @@
   <!-- Breadcrumb -->
   <nav aria-label="breadcrumb" class="mb-3">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="{% url 'home' %}" class="text-decoration-none">Home</a>
-      </li>
+      <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-decoration-none">Home</a></li>
       <li class="breadcrumb-item active text-muted" aria-current="page">{{ post.title }}</li>
     </ol>
   </nav>
@@ -157,11 +122,10 @@
       <div class="d-flex flex-wrap gap-2 mb-4">
         <span class="meta-chip">By {{ post.author }}</span>
         <span class="meta-chip">{{ post.created_on|date:"M j, Y, g:i a" }}</span>
-       <span class="meta-chip">Read time ~ {{ post.content|read_time }} min</span>
-
+        <span class="meta-chip">Read time ~ {{ post.content|read_time }} min</span>
       </div>
 
-      <!-- ✅ Favourite Button -->
+      <!-- Favourite Button -->
       {% if user.is_authenticated %}
       <form method="post" action="{% url 'toggle_favourite' post.id %}" class="d-inline">
         {% csrf_token %}
@@ -178,18 +142,25 @@
       </form>
       {% endif %}
 
-      <!-- ✅ Step 2 applied: wrap content with .post-content -->
       <div class="content-area post-content mt-4">
         {{ post.content|safe }}
       </div>
 
       <hr class="border-secondary my-4">
 
-      <div class="d-flex justify-content-between">
-        <a href="{% url 'home' %}" class="btn btn-sm btn-outline-warning">
-          ← Back to home
-        </a>
-        <div>
+      <!-- Back / Delete / Top -->
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="{% url 'home' %}" class="btn btn-sm btn-outline-warning">← Back to home</a>
+
+        <div class="d-flex gap-2">
+          {% if user.is_authenticated and user == post.author %}
+            <!-- Step 3: Delete button for author -->
+            <a href="{% url 'post_delete' post.slug %}"
+               class="btn btn-sm btn-outline-danger"
+               style="border-radius:10px;">
+              Delete post
+            </a>
+          {% endif %}
           <a class="btn btn-sm btn-outline-info" href="#top">Top ↑</a>
         </div>
       </div>
@@ -207,20 +178,16 @@
             <div class="card-body px-2">
               {% for comment in comments %}
               <div class="comment-box
-                {% if not comment.approved and comment.author == user %}
-                faded{% elif not comment.approved %} d-none{% endif %}">
+                {% if not comment.approved and comment.author == user %}faded
+                {% elif not comment.approved %} d-none{% endif %}">
                 <p class="font-weight-bold">
                   {{ comment.author }}
-                  <span class="font-weight-normal text-muted">
-                    • {{ comment.created_on }}
-                  </span>
+                  <span class="font-weight-normal text-muted"> • {{ comment.created_on }}</span>
                 </p>
-                <div id="comment{{ comment.id }}">
-                  {{ comment.body|linebreaks }}
-                </div>
+                <div id="comment{{ comment.id }}">{{ comment.body|linebreaks }}</div>
 
                 {% if not comment.approved and comment.author == user %}
-                <p class="approval">This comment is awaiting approval</p>
+                  <p class="approval">This comment is awaiting approval</p>
                 {% endif %}
 
                 {% if comment.author == user %}

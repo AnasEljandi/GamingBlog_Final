@@ -9,6 +9,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import PostForm
 from django.utils.text import slugify
+from django.core.exceptions import PermissionDenied
 
 from .models import Post, Comment, FavouritePost
 from .forms import CommentForm
@@ -201,3 +202,23 @@ def post_create(request):
         form = PostForm()
 
     return render(request, "blog/post_create.html", {"form": form})
+
+@login_required
+def post_delete(request, slug):
+    """
+    Delete a post. Only the author (or a superuser) can delete.
+    Shows a confirm page on GET; performs delete on POST.
+    """
+    post = get_object_or_404(Post, slug=slug)
+
+    # permission check
+    if not (request.user == post.author or request.user.is_superuser):
+        raise PermissionDenied("You cannot delete this post.")
+
+    if request.method == "POST":
+        title = post.title
+        post.delete()
+        messages.success(request, f"Post “{title}” was deleted.")
+        return redirect("home")
+
+    return render(request, "blog/post_delete.html", {"post": post})

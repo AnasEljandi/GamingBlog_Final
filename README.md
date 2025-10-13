@@ -85,3 +85,7 @@ These are my Desktop wireframes showing the individual website pages.
   <img src="static/images/Desktop register page wireframe.png" alt="Mobile Wireframe 2" width="45%" />
 </p>
 </p>
+
+[Back to Table of Contents](#table-of-contents)
+
+## User Stories
