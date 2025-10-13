@@ -10,11 +10,8 @@
 7. [Testing](#testing)  
 8. [Bugs](#bugs)  
 9. [Deployment](#deployment)  
-10. [Technologies & Languages Used](#technologies--languages-used)  
-11. [License](#license)  
-12. [Contact](#contact)  
-13. [Acknowledgements](#acknowledgements)  
-14. [Credits](#credits)
+10. [Technologies & Languages Used](#technologies--languages-used)       
+11. [Credits](#credits)
 
 
 ## **Introduction**
@@ -234,6 +231,99 @@ These are my Desktop wireframes showing the individual website pages.
   <em>delete button on created posts by user.</em>
 </p>
 <p align="center">
-  <img src="static/images/delete verification.png" alt="footer" width="70%" /><br>
-  <em>Displays the Verification to delete a comment.</em>
+  <img src="static/images/delete post update.png" alt="footer" width="70%" /><br>
+  <em>Displays the Verification to delete a .</em>
 </p>
+<p align="center">
+  <img src="static/images/create post.png" alt="footer" width="70%" /><br>
+  <em>Displays the form like format to create post.</em>
+</p>
+
+### Favourite posts
+- Add/remove: able to favourite other users post/yourselfs.  
+<p align="center">
+  <img src="static/images/favourite post.png" alt="footer" width="70%" /><br>
+  <em>adding any post and ends in this  page , to view.</em>
+</p>
+
+[Back to Table of Contents](#table-of-contents)
+
+
+## Future Features
+
+- Pictures that can be implemented on posts to suit the topics to users
+
+## Entity Relationship Diagram
+
+<p align="center">
+  <img src="static/images/EDR.png" alt="footer" width="70%" /><br>
+  <em>adding any post and ends in this  page , to view.</em>
+</p>
+
+[View the Entity Relationship Diagram (ERD) on dbdiagram.io](https://dbdiagram.io/d/ERD-update-diagram-68dae805d2b621e42277936d)
+
+[Back to Table of Contents](#table-of-contents)
+
+## Testing
+
+### Manual & Responsive Testing
+- Tested on Chrome, edge 
+- Devices: desktop, tablet, mobile (e.g., Samsung GaLAXY S8, iPhone SE Pro , iPad Pro)
+
+<p align="center">
+  <img src="static/images/samsung.png" alt="footer" width="50" /><br>
+  <em>Displays the post on samsung.</em>
+</p>
+
+<p align="center">
+  <img src="static/images/ipad pro.png" alt="footer" width="50%" /><br>
+  <em>Displays the post on Ipad .</em>
+</p>
+
+### Validator Testing
+- **HTML/CSS:** tested the files using css and html validators
+<p align="center">
+  <img src="static/images/post _detail.html.png" alt="footer" width="50%" /><br>
+  <p align="center">
+  <img src="static/images/post delete html.png" alt="footer" width="50%" /><br>
+</p>.
+ <img src="static/images/post delete html.png" alt="footer" width="50%" /><br>
+</p>.
+<img src="static/images/base.html.png" alt="footer" width="50%" /><br>
+</p>.
+<img src="static/images/admin py.png" alt="footer" width="50%" /><br>
+</p>.
+<img src="static/images/home page html.png" alt="footer" width="50%" /><br>
+</p>
+<img src="static/images/sign up.html.png" alt="footer" width="50%" /><br>
+</p>.
+<img src="static/images/sign up appear . hyml.png" alt="footer" width="50%" /><br>
+</p
+
+## Javascript test
+</p>
+<img src="static/images/java scrript feedback.png" alt="footer" width="50%" /><br>
+</p>.
+- No error in the java script comment
+-  In this testing the picture above show yellow or comments in both java/css and python however they arent errors and are more suggestions or some identation issue however it doesnt effet the website at all
+
+### lighthouse testing 
+ Google Lighthouse audits for performance, accessibility, SEO (desktop & mobile). 
+
+</p>
+<img src="static/images/LightHouse test.png" alt="footer" width="50%" /><br>
+</p>.
+</p>
+<img src="static/images/Light House metrics.png" alt="footer" width="50%" /><br>
+</p>.
+
+### **Bugs**
+- no bugs happend however only minor adjustments on the css
+
+### **Credits**
+- Ai usage =  i have used a bit of chatgbt to provide me ideas and errors with code as the development of the project
+- dbdiagram = i have used this for ERD diagram
+- Coolors = for the colous and reference
+- google font = took some inspiration of fonts from the website
+- boostrap = took inspiration from some boostrap
+- balsamiq = for wire frames
