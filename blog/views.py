@@ -203,6 +203,7 @@ def post_create(request):
 
     return render(request, "blog/post_create.html", {"form": form})
 
+
 @login_required
 def post_delete(request, slug):
     """
