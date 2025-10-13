@@ -38,3 +38,9 @@
             0 0 25px rgba(0, 229, 255, 0.4);
     }
 }
+
+.delete-warning {
+  color: #ff4b4b;
+  font-weight: 600;
+  text-shadow: 0 0 8px #ff4b4b, 0 0 15px #ff0000;
+}

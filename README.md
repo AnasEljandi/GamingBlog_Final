@@ -89,3 +89,151 @@ These are my Desktop wireframes showing the individual website pages.
 [Back to Table of Contents](#table-of-contents)
 
 ## User Stories
+## User Stories
+
+### 📰 Open a Post
+**As a Site User**, I can click on a post so that I can read the full text.
+
+**Acceptance Criteria**
+- **AC1:** When a blog post title is clicked, a detailed view of the post is displayed.
+
+---
+
+###  View Comments
+**As a Site User / Admin**, I can view comments on an individual post so that I can read the conversation.
+
+**Acceptance Criteria**
+- **AC1:** Given one or more user comments, the admin can view them.
+- **AC2:** A site user can click on the comment thread to read the conversation.
+
+---
+
+###  Account Registration
+**As a Site User**, I can register an account so that I can comment on a post.
+
+**Acceptance Criteria**
+- **AC1:** Given an email, a user can register an account.
+- **AC2:** Then the user can log in.
+- **AC3:** When the user is logged in, they can comment.
+
+---
+
+### Comment on a Post
+**As a Site User**, I can leave comments on a post so that I can be involved in the conversation.
+
+**Acceptance Criteria**
+- **AC1:** When a user comment is approved, it becomes visible.
+- **AC2:** A user can reply to comments.
+- **AC3:** Given more than one comment, there is a conversation thread.
+
+---
+
+### Modify or Delete Comment
+**As a Site User**, I can modify or delete my comment on a post so that I can manage my participation in the conversation.
+
+**Acceptance Criteria**
+- **AC1:** A logged-in user can modify their comment.
+- **AC2:** A logged-in user can delete their comment.
+
+---
+
+###  Manage Posts
+**As a Site Admin**, I can create, read, update, and delete posts so that I can manage my blog content.
+
+**Acceptance Criteria**
+- **AC1:** A logged-in user can create a blog post.
+- **AC2:** A logged-in user can read a blog post.
+- **AC3:** A logged-in user can update a blog post.
+- **AC4:** A logged-in user can delete a blog post.
+
+---
+
+###  Create Drafts
+**As a Site Admin**, I can create draft posts so that I can finish writing the content later.
+
+**Acceptance Criteria**
+- **AC1:** A logged-in user can save a draft blog post.
+- **AC2:** The user can finish and publish the content later.
+
+---
+
+### Approve Comments
+**As a Site Admin**, I can approve or disapprove comments so that I can filter out objectionable comments.
+
+**Acceptance Criteria**
+- **AC1:** A logged-in user can approve a comment.
+- **AC2:** A logged-in user can disapprove a comment.
+
+### Favorites Functionality
+
+**As a Django logged-in user**, I can add or remove blog posts from my favorites and view them later so that I can quickly access posts I like.
+
+**Acceptance Criteria**
+- **AC1:** Given a logged-in user, they can mark (add) a blog post as a favorite via a Django view or API endpoint.  
+- **AC2:** Given a logged-in user, they can remove a blog post from their favorites via a Django view or API endpoint.  
+- **AC3:** Given a logged-in user, they can view a list of all blog posts they’ve marked as favorites on a dedicated **“Favorites”** page or API endpoint.
+
+### Create a New Post
+
+**As a logged-in user**, I can create a new blog post using the "Create a New Post" form so that I can share my ideas and updates on the blog.
+
+**Acceptance Criteria**
+- Only authenticated (logged-in) users can access the **Create a New Post** page.  
+- The form includes input fields for **Title** and **Content**.  
+- When the **Publish** button is clicked, the post is submitted and saved.  
+
+[Back to Table of Contents](#table-of-contents)
+
+## Features
+
+### Home Page
+<p align="center">
+  <img src="static/images/Home page.png" alt="Homepage" width="70%" /><br>
+  <em>Displays the blogs that have been created.</em>
+</p>
+
+
+### Footer
+<p align="center">
+  <img src="static/images/footer.png" alt="footer" width="70%" /><br>
+  <em>Displays the speech within it.</em>
+</p>
+
+### Authentication
+- **Register:** User  Register.
+<p align="center">
+  <img src="static/images/register account.png" alt="footer" width="70%" /><br>
+  <em>Displays the create account features.</em>
+</p>
+- **Sign-In:** secure login with remember-me.
+<p align="center">
+  <img src="static/images/sign in.png " alt="footer" width="70%" /><br>
+  <em>Displays the sign in screen.</em>
+</p>
+- **Sign-Out:** safe session termination.
+<p align="center">
+  <img src="static/images/signout.png" alt="footer" width="70%" /><br>
+  <em>Displays the are you sure screen.</em>
+</p>
+
+### Comments
+- Add/edit/delete comments; visible underneath the blog.  
+<p align="center">
+  <img src="static/images/comment.png" alt="footer" width="70%" /><br>
+  <em>Displays the are you sure screen.</em>
+</p>
+<p align="center">
+  <img src="static/images/delete verification.png" alt="footer" width="70%" /><br>
+  <em>Displays the Verification to delete a comment.</em>
+</p>
+
+### posts
+- Add/edit/delete comments; visible underneath the blog to only users that created the post.  
+<p align="center">
+  <img src="static/images/delete post feature.png" alt="footer" width="70%" /><br>
+  <em>delete button on created posts by user.</em>
+</p>
+<p align="center">
+  <img src="static/images/delete verification.png" alt="footer" width="70%" /><br>
+  <em>Displays the Verification to delete a comment.</em>
+</p>
