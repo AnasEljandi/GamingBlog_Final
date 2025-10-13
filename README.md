@@ -60,3 +60,28 @@ This project uses two main fonts for a modern gaming aesthetic:
 [Back to Table of Contents](#table-of-contents)
 
 ## **Wireframes**
+
+### Mobile Wireframes
+These are my mobile wireframes showing the individual website pages.  
+*(The cdesigns are the concept some have little change in final product.)*
+
+<p align="center">
+  <img src="static/images/home phone wire frame.png" alt="Mobile Wireframe 1" width="41%" />
+  <img src="static/images/about phone page wireframe.png" alt="Mobile Wireframe 2" width="45%" />
+</p>
+
+### Desktop Wireframes
+These are my Desktop wireframes showing the individual website pages.  
+*(The cdesigns are the concept some have little change in final product.)*
+
+<p align="center">
+  <img src="static/images/desktop home page wireframe.png" alt="Mobile Wireframe 1" width="44%" />
+  <img src="static/images/desktop aboutpage wireframe.png" alt="Mobile Wireframe 2" width="45%" />
+  <img src="static/images/desktop create post page wireframe.png" alt="Mobile Wireframe 1" width="44%" />
+  <img src="static/images/desktop favourite post page wireframe.png" alt="Mobile Wireframe 2" width="49%" />
+   <img src="static/images/desktop create post page wireframe.png" alt="Mobile Wireframe 1" width="44%" />
+  <img src="static/images/desktop favourite post page wireframe.png" alt="Mobile Wireframe 2" width="50%" />
+   <img src="static/images/desktop log in page wireframe.png" alt="Mobile Wireframe 1" width="44%" />
+  <img src="static/images/Desktop register page wireframe.png" alt="Mobile Wireframe 2" width="45%" />
+</p>
+</p>
