@@ -302,8 +302,8 @@ These are my Desktop wireframes showing the individual website pages.
 </p>
 <img src="static/images/java scrript feedback.png" alt="footer" width="50%" /><br>
 </p>.
-- No error in the java script comment
--  In this testing the picture above show yellow or comments in both java/css and python however they arent errors and are more suggestions or some identation issue however it doesnt effet the website at all
+ - In the pictures it shows that i have used the following validatoirs for the CCS , HTML and Java. as you can see above in the html and css pictures it shows in yellow which means the error , however these arent really errors they just some syntax errors that could be improved but the code will still work as intended and the syntax are more as reccomendations then fixes. However on the java there is no errors and  much debugging isnt required. Therefore after doing the validitors i can confirm the website is working effeciently as i have tested the website after it.
+- Note: that the errors arent needed to debug in the css and html as they arent really problem in the code is just how the validators see it.
 
 ### lighthouse testing 
  Google Lighthouse audits for performance, accessibility, SEO (desktop & mobile). 
@@ -318,8 +318,19 @@ These are my Desktop wireframes showing the individual website pages.
 ### **Bugs**
 - no bugs happend however only minor adjustments on the css
 
+### **Deployment Instructions
+ - In the GitHub repository, navigate to the Settings tab.
+ - Scroll down until GitHub Pages is found.
+- From the source section drop-down menu, select the main branch.
+ - Once the main branch has been selected, hit the save button.
+ - Finally, when the page is refreshed, a detailed ribbon display will indicate the successful deployment.
+
+ ### Storyboard
+ <img src="static/images/{B4D0C4BC-8BEB-4413-914E-25416C0DF72E}.png" alt="footer" width="50%" /><br>
+
+ - This is the storyboard above is how i planned / priotised what task i had to in order for the website to have necessary features.
 ### **Credits**
-- Ai usage =  i have used a bit of chatgbt to provide me ideas and errors with code as the development of the project
+- Ai usage =  i have used a bit of chagbt/Ai tools to help me with the project. what i mean by this is i have used the ai t to assist me quicker in order to make sure certain parts of the project is viable and used the ai tool to ask certain question about the code i have written in  so it  make sure it works and certain  syntax is correct  so that the website is  viable. i have used this to help me summerise my idea for this website i prompt it to give great recommendations for the blog and then used it to make my own type of blog in order for this project to succeed.
 - dbdiagram = i have used this for ERD diagram
 - Coolors = for the colous and reference
 - google font = took some inspiration of fonts from the website
