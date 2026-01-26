@@ -330,7 +330,7 @@ These are my Desktop wireframes showing the individual website pages.
 
  - This is the storyboard above is how i planned / priotised what task i had to in order for the website to have necessary features.
 ### **Credits**
-- Ai usage =  i have used a bit of chagbt/Ai tools to help me with the project. what i mean by this is i have used the ai t to assist me quicker in order to make sure certain parts of the project is viable and used the ai tool to ask certain question about the code i have written in  so it  make sure it works and certain  syntax is correct  so that the website is  viable. i have used this to help me summerise my idea for this website i prompt it to give great recommendations for the blog and then used it to make my own type of blog in order for this project to succeed.
+- Ai usage =  i have used a bit of chagbt/Ai tools to help me with the project. what i mean by this is i have used the ai t to assist me quicker in order to make sure certain parts of the project is viable and used the ai tool to ask certain question about the code i have written in  so it  make sure it works and certain  syntax is correct  so that the website is  viable. i have used this to help me summerise my idea for this website i prompt it to give great recommendations for the blog and then used it to make my own type of blog in order for this project to succeed. This also went into ideas such As UX performance and allowed the performance of my work to increase which allowed my workflow to be effecient and understanding about the project.
 - dbdiagram = i have used this for ERD diagram
 - Coolors = for the colous and reference
 - google font = took some inspiration of fonts from the website
