@@ -7,7 +7,7 @@
 4. [Features](#features)  
 5. [Future Features](#future-features)  
 6. [Entity Relationship Diagram (ERD)](#entity-relationship-diagram)  
-7. [Testing](#testing)  
+7. [Testing](#manual-testing)  
 8. [Bugs](#bugs)       
 9. [Credits](#credits)
 
@@ -262,75 +262,383 @@ These are my Desktop wireframes showing the individual website pages.
 
 [Back to Table of Contents](#table-of-contents)
 
-## Testing
-
-### Manual & Responsive Testing
-- Tested on Chrome, edge 
-- Devices: desktop, tablet, mobile (e.g., Samsung GaLAXY S8, iPhone SE Pro , iPad Pro)
-
+## **Manual Testing**
+-  testing the website across different browsers such as mictosoft edge / google chrome / firefox
+                  
 <p align="center">
-  <img src="static/images/samsung.png" alt="footer" width="50" /><br>
-  <em>Displays the post on samsung.</em>
+  <img src="static/images/firefox.png" alt="footer" width="70%" /><br>
+  <em>FireFox.</em>
 </p>
 
 <p align="center">
-  <img src="static/images/ipad pro.png" alt="footer" width="50%" /><br>
-  <em>Displays the post on Ipad .</em>
+  <img src="static/images/microsoft edge.png" alt="footer" width="70%" /><br>
+  <em>Microsoft edge.</em>
 </p>
 
-### Validator Testing
-- **HTML/CSS:** tested the files using css and html validators
 <p align="center">
-  <img src="static/images/post _detail.html.png" alt="footer" width="50%" /><br>
-  <p align="center">
-  <img src="static/images/post delete html.png" alt="footer" width="50%" /><br>
-</p>.
- <img src="static/images/post delete html.png" alt="footer" width="50%" /><br>
-</p>.
-<img src="static/images/base.html.png" alt="footer" width="50%" /><br>
-</p>.
-<img src="static/images/admin py.png" alt="footer" width="50%" /><br>
-</p>.
-<img src="static/images/home page html.png" alt="footer" width="50%" /><br>
+  <img src="static/images/google chrome.png" alt="footer" width="70%" /><br>
+  <em>google chrome.</em>
 </p>
-<img src="static/images/sign up.html.png" alt="footer" width="50%" /><br>
-</p>.
-<img src="static/images/sign up appear . hyml.png" alt="footer" width="50%" /><br>
-</p
 
-## Javascript test
+## **Responsive Testing**
+- Made Sure the website is visible and works across devices such as mobile , tablet and desktop
+
+   ## **Mobile**
+<p align="center">
+  <img src="static/images/samsung galaxy S8.png" alt="footer" width="70%" /><br>
+  <em>Samsung Galaxy S8+</em>
 </p>
-<img src="static/images/java scrript feedback.png" alt="footer" width="50%" /><br>
-</p>.
- - In the pictures it shows that i have used the following validatoirs for the CCS , HTML and Java. as you can see above in the html and css pictures it shows in yellow which means the error , however these arent really errors they just some syntax errors that could be improved but the code will still work as intended and the syntax are more as reccomendations then fixes. However on the java there is no errors and  much debugging isnt required. Therefore after doing the validitors i can confirm the website is working effeciently as i have tested the website after it.
-- Note: that the errors arent needed to debug in the css and html as they arent really problem in the code is just how the validators see it.
 
-### lighthouse testing 
- Google Lighthouse audits for performance, accessibility, SEO (desktop & mobile). 
-
+<p align="center">
+  <img src="static/images/iphone se.png" alt="footer" width="70%" /><br>
+  <em>Iphone SE</em>
 </p>
-<img src="static/images/LightHouse test.png" alt="footer" width="50%" /><br>
-</p>.
+ 
+<p align="center">
+  <img src="static/images/pixel 7.png" alt="footer" width="70%" /><br>
+  <em>Pixel 7</em>
 </p>
-<img src="static/images/Light House metrics.png" alt="footer" width="50%" /><br>
-</p>.
 
-### **Bugs**
-- no bugs happend however only minor adjustments on the css
+  ## **Tablet's**
+ <p align="center">
+  <img src="static/images/ipad pro.png" alt="footer" width="70%" /><br>
+  <em>ipad pro</em>
+</p>
 
-### **Deployment Instructions
- - In the GitHub repository, navigate to the Settings tab.
- - Scroll down until GitHub Pages is found.
-- From the source section drop-down menu, select the main branch.
- - Once the main branch has been selected, hit the save button.
- - Finally, when the page is refreshed, a detailed ribbon display will indicate the successful deployment.
+ <p align="center">
+  <img src="static/images/Surface pro 7.png" alt="footer" width="70%" /><br>
+  <em>Surface pro 7</em>
+</p>
 
- ### Storyboard
- <img src="static/images/{B4D0C4BC-8BEB-4413-914E-25416C0DF72E}.png" alt="footer" width="50%" /><br>
+<p align="center">
+  <img src="static/images/Surface pro 7.png" alt="footer" width="70%" /><br>
+  <em>Surface pro 7</em>
+</p>
 
- - This is the storyboard above is how i planned / priotised what task i had to in order for the website to have necessary features.
-### **Credits**
-- Ai usage =  i have used a bit of chagbt/Ai tools to help me with the project. what i mean by this is i have used the ai t to assist me quicker in order to make sure certain parts of the project is viable and used the ai tool to ask certain question about the code i have written in  so it  make sure it works and certain  syntax is correct  so that the website is  viable. i have used this to help me summerise my idea for this website i prompt it to give great recommendations for the blog and then used it to make my own type of blog in order for this project to succeed. This also went into ideas such As UX performance and allowed the performance of my work to increase which allowed my workflow to be effecient and understanding about the project.
+ ## **Desktop**
+
+<p align="center">
+  <img src="static/images/pc.png" alt="footer" width="70%" /><br>
+  <em>PC</em>
+</p>
+
+## **Validator Testing**
+- TML, CSS, JavaScript, and Python code were validated using tools such as W3C Validators(HMTL, CSS)
+
+## **HTML**
+ I used the W3C HTML to validate the JavaScript code added to the project.
+
+ <p align="center">
+  <img src="static/images/home page htm final.png" alt="footer" width="70%" /><br>
+  <em>home page</em>
+</p>
+ 
+ <p align="center">
+  <img src="static/images/login.png" alt="footer" width="70%" /><br>
+  <em>login</em>
+</p>
+
+ <p align="center">
+  <img src="static/images/sign up html 1.png" alt="footer" width="70%" /><br>
+  <em>sign up ( 1 error and 1 warning involving the child element but doesnt effect code nor the website)</em>
+</p>
+
+ <p align="center">
+  <img src="static/images/log out.png" alt="footer" width="70%" /><br>
+  <em>logout</em>
+</p>
+
+## **CSS**
+- I used W3C CSS to validate the JavaScript code added to the project.
+
+<p align="center">
+  <img src="static/images/css.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+
+## **javeScript**
+
+I used JSHint to validate the JavaScript code added to the project.
+
+<p align="center">
+  <img src="static/images/java scrript feedback.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+
+## **Python**
+I used CI Python Linter was used to validate the Python files that were created or edited by myself. No issues but errors that dont effect code and are only indentation issues. I have included some screenshots with the results below.
+<p align="center">
+  <img src="static/images/admin py identation.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+<p align="center">
+  <img src="static/images/views py 1 error.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+
+<p align="center">
+  <img src="static/images/urls py identation.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+<p align="center">
+  <img src="static/images/models py identation.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+
+## **Light house testing**
+ <p align="center">
+  <img src="static/images/Light House metrics.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+<p align="center">
+  <img src="static/images/LightHouse test.png" alt="footer" width="70%" /><br>
+  <em></em>
+</p>
+
+## **Deployment**
+## connecting with github
+- Log in to GitHub or create an account if you don’t already have one.
+Go to the CI Full Template.
+- Click the green "Use this template" in the top right and select "Create a new repository".
+ - Enter a name for your new repository and click "Create repository from template".
+- Once the repository is created, click the green "Open " button (if you are using GitPod) to generate a new workspace.
+
+ ## Django Project Setup
+ -  Install Django
+- Run the following command to install Django:
+pip3 install Django~=4.2.1
+- Create a Requirements File
+- Generate a requirements.txt file that lists your project's dependencies:
+- pip3 freeze --local > requirements.txt
+- Create a New Django Project
+- Create your Django project. Replace proj_name with the desired project name. Don’t forget the . at the end of the command!
+django-admin startproject proj_name .
+- Apply Pre-Built Django Account Migrations
+- Run the following command to apply Django’s default migrations:
+python3 manage.py migrate
+- Run the Development Server
+- Start the server to test your project:
+python3 manage.py runserver
+- You will see a yellow error screen. Don’t worry, your server is running properly. The error occurs because Django doesn’t recognize the hostname your project is running on.
+Configure ALLOWED_HOSTS
+
+- Select and copy the hostname displayed in the error message after "Invalid HTTP_HOST header." For example:
+'8000-nielmc-django-project-0kylrta3cs.us2.codeanyapp.com'
+- Add the hostname to the ALLOWED_HOSTS list in your settings.py file:
+ALLOWED_HOSTS = ['8000-nielmc-django-project-0kylrta3cs.us2.codeanyapp.com']
+- Add CSRF Trusted Origins
+Immediately below the ALLOWED_HOSTS variable, add the following line to -  allow your IDE and Heroku to pass CSRF verification:
+CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
+
+## Creating an app
+- Create a new Django app. Replace app_name with the desired app name:
+python3 manage.py startapp app_name
+- Add App to INSTALLED_APPS
+
+- Open your settings.py file and add the app name to the INSTALLED_APPS list:
+INSTALLED_APPS = [
+    ...
+    'app_name',
+]
+- Save the file after making the changes.
+
+## Create Necessary Folders
+- In the IDE file explorer or terminal, create the following three folders in the top-level directory:
+media
+
+static
+
+templates
+- Install WhiteNoise
+- Run the following command to install WhiteNoise:
+pip3 install whitenoise~=5.3.0
+- After installation, freeze your requirements using the freeze command.
+pip3 freeze --local > requirement.txt
+- Wire Up WhiteNoise in settings.py
+- Add WhiteNoise to Django's middleware in settings.py. The line should be added directly after the SecurityMiddleware:
+   MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    …,
+]
+## Prerequisites Before Deploying to Heroku
+- Install Gunicorn and Freeze Requirements
+- First install Gunicorn, a web server for running Python applications.
+pip3 install gunicorn~=20.1
+- Once this is complete update your requirements.txt file:
+pip3 freeze --local > requirements.txt
+##  Create a Procfile
+
+- Create a new file named Procfile in the root directory of your project.
+Note: This file has no file extension, and the P must be capitalized.
+- Add the following line to your Procfile to define the application process:
+
+- Make sure to change proj_name.wsgi to the project name you set above in step 3
+web: gunicorn proj_name.wsgi
+- Add Deployed App to ALLOWED_HOSTS
+- In settings.py, add your Heroku app URL (or the deployed website URL) to the ALLOWED_HOSTS list. Do not include https:// or a trailing /. For example:
+ALLOWED_HOSTS = ['yourprojecturl-7fbns8df.herokuapp.com']
+
+## Database Setup (PostgreSQL)
+- The website uses PostgreSQL hosted Code Institute
+- A link is provided to create a database using the CI Database Maker.
+- Enter your email address and click create database.
+- Check your emails for your database_url and a link to all your database information.
+
+## Connecting to your database.
+- Install Database Packages
+
+- Run the following command to install the necessary database packages:
+pip3 install dj-database-url~=0.5 psycopg
+- After installation, freeze your requirements using the freeze command.
+- This will update the requirements.txt
+pip3 freeze --local > requirements.txt
+- Create env.py File
+
+- In the root directory of your project, create a new file named env.py.
+- Add env.py to .gitignore
+
+- Open your .gitignore file and add the following line:
+env.py
+- Note:* If you are using the CI template, this is already included.
+Import the os Library
+- At the top of the env.py file, add this line of code:
+import os
+- Set Environment Variables
+- In env.py, add the following code:
+os.environ["DATABASE_URL"] = "Paste the PostgreSQL database URL inside these double quotes"
+- Add a Secret Key
+- In env.py, add the following line:
+I used Djecrety to make my secret key.
+os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
+Update settings.py
+- Import Necessary Modules
+- Update the top of your settings.py file with the following:
+from pathlib import Path
+import os
+import dj_database_url
+
+if os.path.isfile("env.py"):
+    import env
+I changed my DEBUG at this point to make sure I never forgot to change it to Fause before deploying. (This is not needed
+If os.path.isfile("env.py"):
+   import env
+   DEBUG = True
+else:
+    DEBUG = False
+- Replace the Insecure Secret Key
+- Remove the hardcoded secret key and replace it with:
+SECRET_KEY = os.environ.get('SECRET_KEY')
+- Comment Out the Old DATABASES Section
+- Comment out the default SQLite database configuration:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+     }
+#}
+- Add New DATABASES Section
+- Replace it with the following to link to the DATABASE_URL variable on Heroku:
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+- Save All Files and Make Migrations
+- Run the following command:
+python3 manage.py migrate
+- Creating a Super User
+- Creating a super user in Django is an important step to gain access to the admin interface with extra privileges.
+- Run the following command:
+python3 manage.py createsuperuser
+
+## Deploying to Heroku
+- Navigate to Your Heroku Dashboard
+
+- Log in to Heroku or create a new account, then navigate to the Heroku Dashboard.
+- Create a New Heroku App
+
+- Click Create New App.
+- Choose a unique app name.
+- Select a region close to your location.
+- Add Config Var in App Settings
+
+- Go to the Settings tab of your app.
+
+- Scroll down to Config Vars and click Reveal Config Vars.
+
+- Add a new key-value pair:
+
+Key: DISABLE_COLLECTSTATIC
+
+Value: 1
+- Connect to Repository
+
+- In your Heroku app, navigate to the Deploy tab.
+Click GitHub then search for your repository and select it.
+Check for Add-ons
+
+- Navigate to the Resources tab.
+- Delete any Postgres DB add-ons (if they are not required.)
+- Add Secret Key to Config Vars
+
+- Add a config variable with the following details:
+Key: SECRET_KEY
+
+Value: randomSecretKey
+- Add a Config Var for DATABASE_URL
+- Add another config variable with the following details:
+- Key: DATABASE_URL
+
+- Value: Your PostgreSQL database URL from the previous step.
+Add database url to Heroku Config Vars
+- In Heroku, navigate to the Settings tab and add a Config Var with the following details:
+Key: Database_URL
+
+Value: database://************************
+
+
+## Clone the Project
+- To create a local clone of this repository from GitHub, follow these steps:
+
+- Log in to GitHub:
+- Ensure you are logged into your GitHub account.
+- Locate the Repository:
+- Copy the Repository URL:
+- Above the list of files in the repository, click the "Code" button.
+- Select your preferred cloning method: HTTPS, SSH, or GitHub CLI.
+- Click the "Copy" button to copy the repository URL to your clipboard.
+- Open Your Terminal:
+- Launch your terminal or Git Bash.
+- Navigate to Your Desired Directory:
+- Change the current working directory to the location where you want to clone the repository.
+- Clone the Repository:
+- Use the git clone command followed by the copied URL:
+  - git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+  cd YOUR_REPOSITORY
+- Install Dependencies:
+- Navigate to the project directory and install the required dependencies by running:
+ pip install -r requirements.txt
+- Set Up the env.py File:
+- Create an env.py file to store sensitive data such as your database-  API key and PostgreSQL URL.
+- Add the following to your env.py file:
+import os
+os.environ["DATABASE_URL"]="<your_postgresql_url>"
+os.environ["SECRET_KEY"]="<your_secret_key>"
+os.environ["Database_URL"]="<your_database_api_key>"
+- Add env.py to .gitignore:
+
+- Ensure the env.py file is listed in your .gitignore file to prevent sensitive information from being pushed to GitHub.
+- Follow the Remaining Setup Steps:
+
+- Complete the rest of the Django project setup process as detailed in the above instructions before pushing your code to GitHub.
+
+## **kanbanboard**
+[Agile board](https://github.com/users/AnasEljandi/projects/9)
+## **Credits**
+- Ai usage = During this project, I used AI tools such as ChatGPT to support my learning and development process. I mainly used AI as a way to ask questions about code I had written, helping me check that my syntax was correct and that different parts of the project were working as expected.
+ I found AI particularly useful when I was unsure about certain errors or needed clarification, as it helped me understand what was going wrong rather than just giving me a solution. This allowed me to fix issues more efficiently while still learning from the process.
+-I also used AI to help refine my initial idea for the website. By prompting it with my concept, I was able to explore suggestions for how to structure the blog and improve the overall design. I then took those ideas and developed them further in my own way to suit the goals of my project.
+ Additionally, AI supported me with UX and performance ideas, which helped me think more about how users would interact with the site. This improved both the usability of the project and my overall workflow, as I was able to work more efficiently and with greater confidence.
+Overall, I used AI as a support tool to guide my thinking, improve my understanding, and speed up development, while ensuring that all final decisions and implementations were my own.
 - dbdiagram = i have used this for ERD diagram
 - Coolors = for the colous and reference
 - google font = took some inspiration of fonts from the website
