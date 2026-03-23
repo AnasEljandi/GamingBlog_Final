@@ -7,8 +7,7 @@
 4. [Features](#features)  
 5. [Future Features](#future-features)  
 6. [Entity Relationship Diagram (ERD)](#entity-relationship-diagram)  
-7. [Testing](#manual-testing)  
-8. [Bugs](#bugs)       
+7. [Testing](#manual-testing)        
 9. [Credits](#credits)
 
 
